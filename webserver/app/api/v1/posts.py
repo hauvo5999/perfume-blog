@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, status
-from app.models.models import Post
+from app.models.post import Post
 from typing import List
 
 post_router = APIRouter(

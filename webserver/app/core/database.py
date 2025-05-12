@@ -7,7 +7,13 @@ TORTOISE_ORM = {
     },
     "apps": {
         "models": {
-            "models": ["app.models.models"],
+            "models": [
+                "app.models.user",
+                "app.models.perfume",
+                "app.models.post",
+                "app.models.attachment",
+                # "app.models.reaction",
+            ],
             "default_connection": "default",
         },
     },

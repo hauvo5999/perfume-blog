@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, status
-from app.models.models import User
+from app.models.user import User
 from typing import List
 
 from app.schemas.user import UserBase
