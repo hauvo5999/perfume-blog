@@ -12,6 +12,6 @@ class User(models.Model):
     created_at = fields.DatetimeField(auto_now_add=True)
     avatar = fields.CharField(max_length=255, null=True)
     
-    posts = fields.ReverseRelation["Post"]
-    comments = fields.ReverseRelation["Comment"]
-    likes = fields.ReverseRelation["Like"]
+    # posts = fields.ReverseRelation["Post"]
+    # comments = fields.ReverseRelation["Comment"]
+    # likes = fields.ReverseRelation["Like"]

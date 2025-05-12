@@ -40,7 +40,7 @@ class Perfume(models.Model):
     notes_middle = fields.TextField(null=True)
     notes_base = fields.TextField(null=True)
     
-    posts = fields.ReverseRelation["Post"]
+    # posts = fields.ReverseRelation["Post"]
 
     class Meta:
         table = "perfume"
