@@ -1,0 +1,72 @@
+name: "perfume-blog"
+services:
+  postgres:
+    image: postgres:${POSTGRES_VERSION:-13}
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./:/opt
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: perfume
+      POSTGRES_USER: hauvo
+      POSTGRES_PASSWORD: hauvo
+    tty: true
+  
+  # elasticsearch:
+  #   image: elasticsearch:8.15.5
+  #   volumes:
+  #     - elasticsearch_data:/var/lib/elasticsearch/data
+  #   environment:
+  #     - xpack.security.enabled=false
+  #     - "discovery.type=single-node"
+  #   ports:
+  #     - 9200:9200
+  #     - 9300:9300
+  
+  # kibana:
+  #   image: kibana:7.17.26
+  #   environment:
+  #     - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+  #   depends_on:
+  #     - elasticsearch
+  #   ports:
+  #     - 5601:5601
+    
+  # webserver:
+  #   image: builong99/blog-server:18
+  #   build:
+  #     context: ./webserver
+  #     dockerfile: ./builder/Dockerfile
+  #     platforms:
+  #       - "linux/amd64"
+  #       - "linux/arm64"
+  #   volumes:
+  #     - ./webserver:/opt/source
+  #     - ./webserver/logs:/opt/logs
+  #     - ./webserver/storage:/opt/storage
+  #     - webserver_data:/opt/webserver
+  #   ports:
+  #     - 8000:8000
+  #   depends_on:
+  #     - postgres
+  #     - elasticsearch
+
+  # qdrant:
+  #   image: qdrant/qdrant:latest
+  #   ports:
+  #     - "6333:6333"
+  #     - "6334:6334"
+  #   volumes:
+  #     - qdrant_data:/qdrant/storage
+  #   environment:
+  #     - QDRANT_ALLOW_RECOVERY_MODE=true
+  #   restart: unless-stopped
+
+volumes:
+  postgres_data:
+  # elasticsearch_data:
+  # webserver_data:
+  # qdrant_data:
+ 
