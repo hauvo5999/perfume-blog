@@ -24,6 +24,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
+  display: contents;
 }
 
 a {
@@ -40,12 +41,6 @@ a:hover {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.home-hero {
-  background-image: url(/perfume-bottles-2.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .not-found-page {
@@ -68,4 +63,16 @@ a:hover {
 
 .not-found-page p {
   margin-bottom: 2rem;
-} 
+}
+
+.home-hero {
+  background-image: url(/perfume-bottles-2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.blogs-background {
+  background-image: url(/perfume-bottles.jpg);
+  background-size: cover;
+  background-position: center;
+}
