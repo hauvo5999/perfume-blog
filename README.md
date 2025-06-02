@@ -13,7 +13,7 @@ A modern web application for perfume enthusiasts to share reviews, discover new 
 ## 🛠 Tech Stack
 
 - **Frontend**: React.js
-- **Backend**: Node.js/Express
+- **Backend**: FastAPI
 - **Database**: PostgreSQL
 - **Search Engine**: Elasticsearch (optional)
 - **Vector Database**: Qdrant (optional)
@@ -74,10 +74,13 @@ npm start
 ```
 
 ### Backend Development
+- Install python version 3.9 or higher
 ```bash
 cd webserver
-npm install
-npm run dev
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python main.py
 ```
 
 ## 📝 License
@@ -94,6 +97,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📧 Contact
 
-Your Name - your.email@example.com
+Hau Vo - voxuanhau1999@gmail.com
 
-Project Link: [https://github.com/yourusername/perfume-blog](https://github.com/yourusername/perfume-blog)
+Project Link: [https://github.com/hauvo5999/perfume-blog](https://github.com/hauvo5999/perfume-blog)
