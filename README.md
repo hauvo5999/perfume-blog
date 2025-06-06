@@ -12,7 +12,7 @@ A modern web application for perfume enthusiasts to share reviews, discover new 
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React.js
+- **Frontend**: React.js/Next.js
 - **Backend**: FastAPI
 - **Database**: PostgreSQL
 - **Search Engine**: Elasticsearch (optional)
@@ -29,7 +29,7 @@ A modern web application for perfume enthusiasts to share reviews, discover new 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/perfume-blog.git
+   git clone https://github.com/hauvo5999/perfume-blog.git
    cd perfume-blog
    ```
 
